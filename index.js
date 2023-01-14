@@ -7,7 +7,7 @@ const dotenv = require("dotenv").config();
 app.get("/createtimestamp", function (req, res) {
     fs.writeFile(
         `./${date.getDate()}-${date.getMonth() + 1
-        }-${date.getFullYear()}-${date.getHours()}.txt`,
+        }-${date.getFullYear()}-${date.getHours()}-${date.getMinutes()}.txt`,
         `Date:${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()} 
     timestamp : ${new Date()}`,
         (err) => {
